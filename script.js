@@ -16,10 +16,18 @@ function addColor() {
     cellList = document.querySelectorAll('.cell');
     cellList.forEach(function (cell) {
         cell.addEventListener('mouseover', function (e) {
-            e.target.style.backgroundColor = 'black';
+            e.target.style.backgroundColor = generateRandomColor();
         });
 
     });
+}
+
+function generateRandomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
 resetButton.addEventListener('click', function (e) {
