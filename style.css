@@ -1,18 +1,24 @@
 .container{
+    flex: 19;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    height: 100%;
 }
 
 .cell{
     border: 1px solid black;
     padding: 10px;
-    width: 6.25%;
     box-sizing: border-box;
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+button{
+    flex: 1;
 }
